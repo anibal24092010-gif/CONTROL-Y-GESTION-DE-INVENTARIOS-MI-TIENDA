@@ -1,0 +1,58 @@
+<!-- Archivo vectorial SVG optimizado para el isotipo de marca de la aplicación -->
+<!-- viewBox define el lienzo de coordenadas de 100x100 píxeles escalables -->
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Sección de definiciones: gradientes de color y efectos de sombra -->
+  <defs>
+    <!-- Gradiente lineal naranja/coral para el comprador (dinamismo y energía) -->
+    <linearGradient id="gradMT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ff7849" />
+      <stop offset="100%" stopColor="#ea580c" />
+    </linearGradient>
+
+    <!-- Gradiente lineal azul profundo para el chasis del carrito (confianza y solidez) -->
+    <linearGradient id="gradAzul" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0284c7" />
+      <stop offset="100%" stopColor="#1e40af" />
+    </linearGradient>
+
+    <!-- Filtro de sombra paralela suave para dar sensación de elevación a la tarjeta base -->
+    <filter id="softGlow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0284c7" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Tarjeta base blanca con bordes redondeados y contorno sutil -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softGlow)" />
+
+  <!-- 1. Silueta del Comprador en movimiento -->
+  <!-- Cabeza de la figura -->
+  <circle cx="30" cy="30" r="6" fill="url(#gradMT)" />
+  <!-- Torso y piernas estilizadas formando la primera parte del monograma -->
+  <path d="M24 41 C24 41, 34 39, 38 47 L34 64 L27 64 L31 52 L22 56 L18 52 L25 43 Z" fill="url(#gradMT)" />
+  <!-- Brazo en posición de empuje hacia el manillar del carrito -->
+  <path d="M34 44 L47 49" stroke="url(#gradMT)" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- 2. Carrito de Compras / Estructura del monograma -->
+  <!-- Canasta del carrito en trazo azul degradado -->
+  <path d="M45 47 L49 52 H74 L69 66 H52 L48 52" fill="#f8fafc" stroke="url(#gradAzul)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Chasis inferior de soporte -->
+  <path d="M52 66 L50 72 H70" stroke="url(#gradAzul)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Rueda delantera y rueda trasera en naranja de contraste -->
+  <circle cx="51" cy="75" r="3" fill="#f97316" />
+  <circle cx="69" cy="75" r="3" fill="#f97316" />
+
+  <!-- 3. Mercancía / Productos cargados en el inventario -->
+  <!-- Envase / Caja verde (frescura / abarrotes) -->
+  <rect x="51" y="43" width="7" height="11" rx="1.5" fill="#10b981" />
+  <!-- Fruta / Producto esférico amarillo -->
+  <circle cx="62" cy="48" r="4.5" fill="#fbbf24" />
+  <!-- Envase / Caja roja (productos procesados) -->
+  <rect x="66" y="45" width="6" height="9" rx="1.5" fill="#f43f5e" />
+
+  <!-- 4. Distintivo de Trazabilidad y Control de Inventarios -->
+  <!-- Círculo esmeralda de aprobación -->
+  <circle cx="74" cy="24" r="7.5" fill="#10b981" />
+  <!-- Tilde / Check de verificación en color blanco -->
+  <path d="M71 24 L73.5 26.5 L77.5 21.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
