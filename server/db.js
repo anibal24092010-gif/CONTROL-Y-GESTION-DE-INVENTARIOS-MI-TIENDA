@@ -18,10 +18,10 @@ const mysql = require("mysql2/promise");
 const pool = mysql.createPool({
   host: process.env.DB_HOST || "localhost",                 // Servidor de base de datos
   user: process.env.DB_USER || "root",                      // Usuario de acceso
-  password: process.env.DB_PASSWORD || "P4ssword",          // Contraseña
+  password: process.env.DB_PASSWORD || "",          // Contraseña
   database: process.env.DB_NAME || "mitienda_db",             // Nombre de la base de datos
-  port: process.env.DB_PORT || 3306,                        // Puerto de conexión TCP
-  ssl: { rejectUnauthorized: false },                       // Obligatorio para conexiones seguras con Clever Cloud
+  port: process.env.DB_PORT || 3307,                        // Puerto de conexión TCP
+  //ssl: { rejectUnauthorized: false },                       // Obligatorio para conexiones seguras con Clever Cloud
   waitForConnections: true,                                 // Encola peticiones si el pool está ocupado
   connectionLimit: 10,                                      // Límite máximo de conexiones simultáneas
   queueLimit: 0                                             // Sin límite de espera en cola
