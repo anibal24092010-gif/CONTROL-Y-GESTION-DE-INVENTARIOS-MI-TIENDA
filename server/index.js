@@ -309,7 +309,6 @@ app.put("/api/movimientos/:id", async (req, res) => {
 });
 // =========================================================================
 // INICIALIZACIÓN DEL SERVICIO
-// =========================================================================
 const path = require("path");
 
 // =========================================================================
@@ -317,8 +316,16 @@ const path = require("path");
 // =========================================================================
 app.use(express.static(path.join(__dirname, "../build")));
 
-app.get("*", (req, res) => {
+// Enrutamiento seguro compatible con Express y Node moderno
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api/')) {
+    return next();
+  }
   res.sendFile(path.join(__dirname, "../build/index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor API corriendo exitosamente en http://localhost:${PORT}`);
 });
 app.listen(PORT, () => {
   console.log(`🚀 Servidor API corriendo exitosamente en http://localhost:${PORT}`);
