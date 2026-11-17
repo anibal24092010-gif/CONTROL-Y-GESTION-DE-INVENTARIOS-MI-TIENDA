@@ -310,6 +310,16 @@ app.put("/api/movimientos/:id", async (req, res) => {
 // =========================================================================
 // INICIALIZACIÓN DEL SERVICIO
 // =========================================================================
+const path = require("path");
+
+// =========================================================================
+// SERVIR EL FRONTEND DE REACT EN PRODUCCIÓN
+// =========================================================================
+app.use(express.static(path.join(__dirname, "../build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 app.listen(PORT, () => {
   console.log(`🚀 Servidor API corriendo exitosamente en http://localhost:${PORT}`);
 });
