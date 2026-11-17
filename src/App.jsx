@@ -75,8 +75,8 @@ export default function App() {
   };
 
   useEffect(() => {
-    if (usuarioActivo) cargarDatos(true);
-  }, [usuarioActivo]);
+  cargarDatos(true);
+}, []);
 
   useEffect(() => {
     const clickAfuera = (e) => {
